@@ -242,7 +242,7 @@ body{
     background-image: url(../images/accordeon-img.jpg);
     width: 65px;
     height: 120px;
-    bottom: -73px;
+    bottom: -105px;
     left: 268px;
 }
 
@@ -264,7 +264,7 @@ body{
 .accordeon__triger-text{
     flex-basis: 387px;
     margin-right: 104px;
-    padding-bottom: 20;
+    padding-bottom: 20px;
 }
 
 .accordeon__content{
@@ -282,7 +282,7 @@ body{
 }
 
 .products{
-    padding-bottom: 150px;
+    margin-bottom: 150px;
     overflow: hidden;
 }
 
@@ -453,9 +453,40 @@ body{
     gap: 0 20px;
 }
 
+.swiper-pagination{
+    display: none;  
+}
+
+@media (max-width: 1640px){
+    .products__title {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .products__items {
+        position: static;
+    }
+}
+
+@media (max-width: 1240px){
+    .products__item-img{
+        width: 100%;
+    }
+}
+
 @media (max-width: 1040px){
     .about__textbox{
         display: block; 
+    }
+
+    .accordeon__inner{
+        padding-left: 0;
+    }
+
+    .footer__img{
+        display: none;
+    }
+    .footer__nav{
+        margin-right: 0;
     }
 }
 
@@ -469,25 +500,96 @@ body{
         margin-left: 0;
     }
 
+    .container-arrow{
+        display: none;
+    }
+    .swiper-pagination{
+        display: block;
+    }
+
     .about__textbox{
         margin-bottom: 50px;
     }
+
+    .swiper-pagination-bullet-active {
+        background-color: #7449BB;
+    }
+
 }
 
 @media (max-width: 850px){
     .top-slide__inner{
         flex-wrap: wrap;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 500px;
+    }
+    .top-slide__content{
+        margin-top: 0;
     }
     .top-slide__img{
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
+        display: none;
     }
     .top-slide__btn {
         margin-right: auto;
         margin-top: 50px;
         margin-bottom: 20px;
+    }
+
+    .products__items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .products__item{
+        margin-bottom: 30px;
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px){
+    .accordeon__triger{
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 0;
+
+    }
+    .accordeon__triger-title{
+        padding-bottom: 10px;
+    }
+    .accordeon__item::before{
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .video__box{
+        min-height: 435px;
+    }
+
+    .footer__top{
+        display: block;
+    }
+    .footer__logo{
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    .footer__item-form{
+        max-width: 400px;
+    }
+    .footer__social-list{
+        margin-top: 30px;
+        display: flex;
+        gap: 0 40px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .footer__social-item + .footer__social-item {
+        margin-top: 0;
+    }
+    .footer__nav-list{
+        gap: 10px 20px;
+        flex-wrap: wrap;
     }
 }
 
@@ -501,6 +603,13 @@ body{
     }
     .about__arrow{
         display: none;
+    }
+
+    .products__item{
+        width: 100%;
+    }
+    .products__item-img{
+        width: 80%;
     }
 }
 
@@ -529,6 +638,16 @@ body{
         object-fit: cover;
         margin: 0 auto;
     }
+
+    .accordeon__item{
+        padding: 0 50px 0 0;
+    }
+    .accordeon__item::before{
+        right: 0;
+    }
+    .accordeon__triger-text{
+        margin-right: 0; 
+    }
 }
 
 @media (max-width: 420px){
@@ -546,12 +665,41 @@ body{
         width: 100%;
     }
     
+    .top,
+    .about,
+    .products,
+    .video {
+        margin-bottom: 50px;
+    }
+
     .about__slider{
         width: 1400px;
     }
     .about__item img{
         width: 340px;
     }
+
+    .accordeon {
+        margin-bottom: 140px;
+    }
+    .accordeon__item:last-child::after{
+        left: 210px;
+    }
+
+    .video__box{
+        min-height: 225px;
+    }
+
+    .footer {
+        padding: 29px 0 30px;
+    }
+    .footer__top{
+        margin-bottom: 30px;
+    }
+    .footer__item + .footer__item{
+        margin-top: 30px;
+    }
+
 }   
 
 @media (max-width: 375px){
